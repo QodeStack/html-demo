@@ -1,0 +1,435 @@
+:root{
+    --text-primary:#fff;
+    --text-base:16px;
+    --text--xl:10px;
+    --text--2xl:20px;
+    --text--3xl:30px;
+    --text--4xl:40px;
+    --text--5xl:50px;
+    --text--6xl:60px;
+    --text--7xl:70px;
+    --fw-bold:bold;
+}
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box; 
+ font-family: "Oswald", sans-serif;  
+}
+.header 
+{
+    /* background-color: black; */
+    height: 80px;
+    padding: 50px 0px;
+    position: absolute;
+    width: 100%;
+    border-bottom:solid 1px #ebdbdb66;
+}
+.header .container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.header .container .menu a 
+{
+    text-decoration: none;
+    font-size: var(--text--2xl);
+    font-weight: 300;
+    color: var(--text-primary);
+    margin: 10px;
+}
+.header .container .logo
+{
+    font-size: var(--text--4xl);
+    font-weight: 400;
+    color: var(--text-primary);
+}
+.header .container .menu a:hover{
+    color:red;
+    transition: color 0.3s;
+}
+.welcome
+{
+   
+    background-image: url(/img/home_slider.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+.welcome .container 
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome .container h2
+{
+    font-size: var(--text--3xl);
+    font-weight: 300;
+    color: var(--text-primary);
+}
+.welcome .container h1
+{
+    font-size: var(--text--7xl);
+    color:var(--text-primary);
+    font-weight:bold;
+    margin-top: -15px;
+}
+.welcome .container a
+{
+    font-size:var(--text--2xl);
+    background-color: rgb(255, 0, 68);
+    padding:10px 30px;
+    text-decoration: none;
+    color: #fff;
+}
+.welcome .container .fa-angle-down
+{
+    font-size:50px;
+    color: #fff;
+    animation: fadedown 2s;
+    animation-iteration-count: infinite;
+}
+.welcome .container a:hover{
+    background-color: rgba(255, 0, 0, 0.824);
+    transition: background 0.5s;
+}
+@keyframes fadedown
+{
+    0%{
+       transform:translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform:translateY(80px);
+        opacity: 0;
+    }
+}
+.services 
+{
+    background-color: black;
+    height: 700px;
+    padding: 30px 0px;
+}
+.services .container
+{
+    
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.services h1{
+    color: red;
+    font-size: var(--text-base);
+    font-weight: 111;
+}
+.services h2{
+    font-size: var(--text--5xl);
+    font-weight: 400;
+    width:70%;
+    text-align: center;
+}
+.services .text-title{
+    color: gray;
+    font-size: var(--text-base);
+    font-weight:var(--fw-bold);
+    width:38%;
+    text-align: center;
+    margin-top: 15px;
+}
+.list{
+    width: 80%;
+    margin: 0px auto;
+    /* display: flex;
+    /* border:1px solid green; */
+    /* justify-content: center;
+    align-items:center; */
+} */
+.list .item {
+    /* border:1px solid red;
+    margin: 5px;
+    padding:100px 25px;
+    background-color: #fff;
+    color: gray;
+    position: relative; */
+    width: 250px;
+}
+.list .item .content {
+    /* border:1px solid red; */
+    margin: 15px;
+    padding:60px 15px;
+    background-color: #fff;
+    color: gray;
+    position: relative;
+ 
+}
+.list .item i{
+    font-size: var(--text--6xl);
+    display:block;
+}
+.list .content{
+    text-align: center;
+}
+.services .item .content::after{
+    content:"";
+    position: absolute;
+    right: 0;
+    top:0;
+    height:0%;
+    width: 5px;
+    background-color: red;
+    transition: height 0.5s;
+}
+.item .content:hover::after{
+    height: 100%;
+    transition:height 0.5s;
+}
+.services .list .item .content .test-content{
+    font-size: 20px;
+    width: 70%;
+    margin: 0px auto;
+}
+.slick-next,.slick-prev
+{
+    display: none !important
+}
+.slick-dots
+{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li
+{
+    margin: 5px;
+    list-style: none;
+}
+.slick-dots li button
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: background 0.5s;
+}
+.slick-dots li button:hover
+{
+    border-radius: 50%;
+    background-color: white;
+    transition: background 0.5s;
+}
+.slick-active button
+{
+    background-color: rgb(255, 0, 72) !important;
+}
+/*blog*/
+.blog
+{
+    /* background-color: orange; */
+    height: 1100px;
+}
+.blog .container
+{
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog h1{
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: gray;
+}
+.blog h2{
+    font-size: 55px;
+    font-weight: 400;
+}
+.blog p{
+    font-size: var(--text-base);
+    font-weight: bold;
+    width: 40%;
+    text-align: center;   
+    color:gray;
+}
+.blog .grid-view{
+    width: 1100px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:25px;
+    height: 100%;
+    
+}
+.blog .grid-view img{
+    width: 100%;
+}
+.item-1{
+    grid-column: 1 /span 2;
+    grid-row: 1 /span 2;
+}
+.item-10{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+.blog .grid-view .item .content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.blog .grid-view .item .content .overlay{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    background: rgba(255, 0, 43, 0.544);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.blog .grid-view .item .content .overlay:hover{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.blog .grid-view .item .content img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(50%) contrast(50%);
+}
+.blog .grid-view .item .content .overlay a{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: #fff;
+    padding: 9px 14px;
+    font-size:var(--text-base);
+    color: black;
+    transition: all 0.5s;
+}
+.blog .grid-view .item .content .overlay a:hover{
+    background-color: black;
+    color: #fff;
+    transition: all 0.5s;
+}
+.blog .grid-view .item .content .overlay .logo-item{
+  position: absolute;
+  bottom:40px;
+  left:25px;
+  color: gray;
+  font-size: var(--text--2xl);
+}
+.blog .grid-view .item .content .overlay .logo-des{
+    position: absolute;
+    bottom:10px;
+    left: -34px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+.blog .grid-view .item-1 .content .overlay .logo-des
+{
+    
+    bottom:10px;
+    left:-175px;
+}
+.blog .grid-view .item-10 .content .overlay .logo-des
+{
+    
+    bottom:10px;
+    left:-175px;
+}
+.blog .overlay{
+    overflow: hidden;
+}
+.blog .overlay:hover .logo-des,.blog .overlay:hover .logo-item,.blog .overlay:hover a{
+    animation: bot_to_top 0.5s;
+}
+
+@keyframes bot_to_top {
+ from{
+    transform:translateY(100px);
+ }  
+ to{
+    transform: translateY(0px);
+ } 
+}
+.statistics
+{
+    background-color: black;
+    margin-top:350px ;
+}
+.statistics .container
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 100px;
+}
+.statistics .container .item
+{
+    text-align: center;
+}
+.statistics .item .number
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: var(--text--6xl);
+}
+.statistics .item .word
+{
+    color: gray;
+    font-weight: 250;
+    font-size: var(--text--2xl);
+}
+
+.digital
+{
+    background-image: url(/img/bussiness_img_1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+.digital h1
+{
+ margin-top: 100px;
+ color: rgb(255, 0, 51);
+ font-size: var(--text--base);
+ font-weight: 300;
+}
+.digital h2
+{
+ color: #fff;
+ font-size:var(--text--5xl);
+ font-weight: 400;
+}
+.digital p
+{
+ margin:25px 0px;
+ width: 40%;
+ text-align: center;
+ color: gray;
+ font-size:var(--text--base);
+ font-weight: var(--fw-bold);
+}
+.digital .container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
